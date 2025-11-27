@@ -70,10 +70,10 @@ export default function OurServices() {
     <section className="py-16 px-6 max-w-7xl mx-auto">
       {/* Heading */}
       <div className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#0A2A3B]">
           Our Services
         </h2>
-        <p className="text-gray-500 mt-3 max-w-2xl mx-auto">
+        <p className="text-[#1D80B2] mt-3 max-w-2xl mx-auto">
           We cultivate a dynamic corporate culture and a flat, participatory 
           management structure which maximizes teamwork and encourages creative 
           thinking and integrated decision making.
@@ -86,13 +86,13 @@ export default function OurServices() {
           const Icon = service.icon;
           return (
             <div key={index} className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4 shadow-sm">
-                <Icon className="w-8 h-8 text-gray-700" />
+              <div className="w-16 h-16 bg-[#E6F0F4] rounded-full flex items-center justify-center mb-4 shadow-sm">
+                <Icon className="w-8 h-8 text-[#125476]" />
               </div>
-              <h3 className="font-semibold text-gray-800 text-lg">
+              <h3 className="font-semibold text-[#0A2A3B] text-lg">
                 {service.title}
               </h3>
-              <p className="text-gray-500 text-sm mt-2">
+              <p className="text-[#1D80B2] text-sm mt-2">
                 {service.desc}
               </p>
             </div>
