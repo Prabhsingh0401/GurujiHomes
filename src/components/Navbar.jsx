@@ -19,16 +19,17 @@ export default function Navbar() {
           {/* DESKTOP MENU */}
           <ul className="hidden md:flex items-center gap-10">
             {["Home", "About Us", "Services", "Contact Us"].map((item) => (
-              <li key={item}>
-                <a
-                  href="#"
-                  className="text-black font-semibold tracking-wide uppercase text-sm hover:text-gray-800 transition relative group"
-                >
-                  {item}
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
-                </a>
-              </li>
-            ))}
+            <li key={item}>
+              <a
+                href={`#${item.toLowerCase().replace(" ", "")}`}
+                className="text-black font-semibold tracking-wide uppercase text-sm hover:text-gray-800 transition relative group"
+              >
+                {item}
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-black group-hover:w-full transition-all duration-300"></span>
+              </a>
+            </li>
+          ))}
+
 
             {/* Reservation Button */}
             <li>

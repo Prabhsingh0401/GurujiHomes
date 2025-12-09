@@ -1,17 +1,43 @@
 export default function AboutUs() {
   return (
-    <section className="w-full py-20 px-6 md:px-16 lg:px-24">
+    <section id="aboutus" className="w-full py-20 px-6 md:px-16 lg:px-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT — Big Number Box */}
-        <div className="flex justify-center">
-          <div className="border-4 border-[#1D80B2] p-10 w-72 h-72 flex flex-col justify-center items-center shadow-xl">
-            <h1 className="text-7xl font-bold text-[#0A2A3B]">10</h1>
-            <p className="uppercase tracking-widest text-sm mt-4 text-[#1D80B2]">
-              Years of<br />Experience
+       <div className="flex justify-center">
+  {/* OUTER FRAME WITH BACKGROUND IMAGE */}
+  <div
+    className="relative w-80 h-80 p-4 shadow-lg"
+    style={{
+      backgroundImage:
+        "url('https://www.shutterstock.com/image-photo/high-rise-buildings-office-area-600nw-2474260777.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* INNER WHITE BOX */}
+          <div className="w-full h-full bg-white flex flex-col justify-center items-center border-[14px] border-transparent">
+            
+            <h1
+              className="text-9xl font-bold text-transparent bg-clip-text 
+                        bg-[url('https://www.shutterstock.com/image-photo/high-rise-buildings-office-area-600nw-2474260777.jpg')] 
+                        bg-cover bg-center"
+            >
+              10
+            </h1>
+
+            <p
+              className="uppercase tracking-widest text-lg font-sembold mt-3 text-transparent bg-clip-text 
+                        bg-[url('https://www.shutterstock.com/image-photo/high-rise-buildings-office-area-600nw-2474260777.jpg')] 
+                        bg-cover bg-center text-center"
+            >
+              Years of <br /> Experience
             </p>
+
           </div>
+
         </div>
+      </div>
 
         {/* RIGHT — Text */}
         <div>
@@ -45,7 +71,7 @@ export default function AboutUs() {
               <p className="text-sm text-[#1D80B2]">Happy Guests</p>
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-[#0A2A3B]">300+</h3>
+              <h3 className="text-3xl font-bold text-[#0A2A3B]">5+</h3>
               <p className="text-sm text-[#1D80B2]">Managed Properties</p>
             </div>
           </div>

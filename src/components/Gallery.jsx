@@ -5,26 +5,26 @@ const categories = ["All", "Living Room", "Bedroom", "Gym", "Bathroom", "Dining"
 const images = [
   // Living Room
   {
-    url: "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXBhcnRtZW50c3xlbnwwfHwwfHx8MA%3D%3D",
+    url: "/Image(1).jpeg",
     category: "Living Room",
   },
   {
-    url: "https://images.unsplash.com/photo-1619542402915-dcaf30e4e2a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8QXBhcnRtZW50c3xlbnwwfHwwfHx8MA%3D%3D",
+    url: "/Image(2).jpeg",
     category: "Living Room",
   },
   {
-    url: "https://images.unsplash.com/photo-1612637968894-660373e23b03?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8QXBhcnRtZW50c3xlbnwwfHwwfHx8MA%3D%3D",
+    url: "/Image(3).jpeg",  
     category: "Living Room",
   },
 
   // Bedroom
   {
-    url: "https://images.unsplash.com/photo-1432297984334-707d34c4163a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEFwYXJ0bWVudHN8ZW58MHx8MHx8fDA%3D",
+    url: "/Image(4).jpeg",
     category: "Bedroom",
   },
   
   {
-    url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+    url: "/Image(5).jpeg",
     category: "Dining",
   },
 ];

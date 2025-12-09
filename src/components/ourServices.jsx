@@ -15,8 +15,8 @@ import {
 export default function OurServices() {
   const services = [
     {
-      title: "Interior Design & Onboarding",
-      desc: "Creating thoughtfully designed interiors and seamless onboarding.",
+      title: "Interior Design",
+      desc: "Creating thoughtfully designed interiors",
       icon: Home
     },
     {
@@ -67,7 +67,7 @@ export default function OurServices() {
   ];
 
   return (
-    <section className="py-16 px-6 max-w-7xl mx-auto">
+    <section className="py-16 px-6 max-w-7xl mx-auto" id="services">
       {/* Heading */}
       <div className="text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-bold text-[#0A2A3B]">
@@ -75,8 +75,7 @@ export default function OurServices() {
         </h2>
         <p className="text-[#1D80B2] mt-3 max-w-2xl mx-auto">
           We cultivate a dynamic corporate culture and a flat, participatory 
-          management structure which maximizes teamwork and encourages creative 
-          thinking and integrated decision making.
+          management structure which maximizes teamwork and encourages creativity
         </p>
       </div>
 

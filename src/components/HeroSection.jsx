@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="relative h-auto lg:h-[600px] overflow-hidden shadow-2xl">
+    <section id="home" className="relative h-auto lg:h-[600px] overflow-hidden shadow-2xl">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"

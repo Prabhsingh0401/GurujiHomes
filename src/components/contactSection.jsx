@@ -3,14 +3,14 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export default function ContactSection() {
   const infoCards = [
-    { icon: Phone, title: "Phone", value: "+1 (555) 123-4567" },
-    { icon: Mail, title: "Email", value: "info@hotelapartments.com" },
-    { icon: MapPin, title: "Address", value: "123 Luxury Street, Downtown" },
+    { icon: Phone, title: "Phone", value: "+971 50 289 1582\n  ,  +971 50 681 6994" },
+    { icon: Mail, title: "Email", value: "info@baithome.co" },
+    { icon: MapPin, title: "Address", value: "Office 204, Mohammed Saleh Tower, Al Maktoum St Deira Dubai UAE" },
     { icon: Clock, title: "Reception Hours", value: "24/7 Available" },
   ];
 
   return (
-    <section className="py-16 px-6 bg-white">
+    <section className="py-16 px-6 bg-white" id="contactus">
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-[#0A2A3B]">
@@ -126,7 +126,7 @@ export default function ContactSection() {
 
                 <div>
                   <h4 className="font-semibold text-[#0A2A3B]">{card.title}</h4>
-                  <p className="text-[#1D80B2] text-sm">{card.value}</p>
+                  <p className="text-[#1D80B2] text-sm font-semibold">{card.value}</p>
                 </div>
               </div>
             );

@@ -6,6 +6,7 @@ import ContactSection from '../components/contactSection';
 import Gallery from '../components/Gallery';
 import AboutUs from '../components/Aboutus';
 import NumbersSection from '../components/ourNumbers';
+import Whychooseus from '../components/whyChooseUs';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <HeroSection />
       <AboutUs></AboutUs>
       <NumbersSection />
+      <Whychooseus />
 
       {/* Main Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
