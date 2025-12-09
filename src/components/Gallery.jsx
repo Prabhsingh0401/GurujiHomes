@@ -1,9 +1,6 @@
 import { useState } from "react";
 
-const categories = ["All", "Living Room", "Bedroom", "Gym", "Bathroom", "Dining"];
-
 const images = [
-  // Living Room
   {
     url: "/Image(1).jpeg",
     category: "Living Room",
@@ -16,15 +13,16 @@ const images = [
     url: "/Image(3).jpeg",  
     category: "Living Room",
   },
-
-  // Bedroom
   {
     url: "/Image(4).jpeg",
     category: "Bedroom",
   },
-  
   {
     url: "/Image(5).jpeg",
+    category: "Dining",
+  },
+  {
+    url: "/Image(6).jpeg",
     category: "Dining",
   },
 ];

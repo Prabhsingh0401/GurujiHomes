@@ -21,8 +21,11 @@ export default function HeroSection() {
             Unlocks the possibilities and simplifies the experience of vacation home rentals.
           </h2>
 
-          <button className="bg-white hover:bg-gray-200 text-[#125476] font-bold py-3 px-8 rounded-xl transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl active:scale-95 mt-10 w-max">
-            Know More
+          <button 
+            className="bg-white hover:bg-gray-200 text-[#125476] font-bold py-3 px-8 rounded-xl transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl active:scale-95 mt-10 w-max"
+            onClick={() => document.getElementById('aboutus').scrollIntoView({ behavior: 'smooth' })}
+          >          
+          Know More
           </button>
         </div>
 
@@ -37,7 +40,7 @@ export default function HeroSection() {
               <input
                 type="text"
                 className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#125476]"
-                placeholder="John Doe"
+                placeholder="Enter your name"
               />
             </div>
 
@@ -47,7 +50,7 @@ export default function HeroSection() {
               <input
                 type="text"
                 className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#125476]"
-                placeholder="+1 234 567 890"
+                placeholder="Enter your phone number"
               />
             </div>
 
