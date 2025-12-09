@@ -33,7 +33,8 @@ export default function Navbar() {
 
             {/* Reservation Button */}
             <li>
-              <button className="bg-[#125476] text-white font-semibold tracking-widest uppercase px-6 py-2 rounded-sm shadow-sm hover:bg-[#0E415C] transition-all">
+              <button className="bg-[#125476] text-white font-semibold tracking-widest uppercase px-6 py-2 rounded-sm shadow-sm hover:bg-[#0E415C] transition-all cursor-pointer"
+              onClick={() => document.getElementById('contactus').scrollIntoView({ behavior: 'smooth' })}>
                 Reservation
               </button>
             </li>

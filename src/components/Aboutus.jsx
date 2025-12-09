@@ -77,7 +77,7 @@ export default function AboutUs() {
           </div>
 
           {/* Button */}
-          <button className="border border-[#125476] px-8 py-3 text-sm font-medium tracking-wide hover:bg-[#125476] hover:text-white transition duration-300"
+          <button className="border border-[#125476] px-8 py-3 text-sm font-medium tracking-wide hover:bg-[#125476] hover:text-white transition duration-300 cursor-pointer"
           onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}>
             EXPLORE IT
           </button>

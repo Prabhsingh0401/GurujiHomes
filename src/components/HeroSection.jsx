@@ -22,7 +22,7 @@ export default function HeroSection() {
           </h2>
 
           <button 
-            className="bg-white hover:bg-gray-200 text-[#125476] font-bold py-3 px-8 rounded-xl transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl active:scale-95 mt-10 w-max"
+            className="bg-white hover:bg-gray-200 text-[#125476] font-bold py-3 px-8 rounded-xl transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl active:scale-95 mt-10 w-max cursor-pointer"
             onClick={() => document.getElementById('aboutus').scrollIntoView({ behavior: 'smooth' })}
           >          
           Know More
@@ -99,7 +99,7 @@ export default function HeroSection() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-[#125476] text-white font-bold py-3 rounded-xl hover:bg-[#0E415C] transition duration-300 hover:shadow-lg transform hover:scale-[1.02] active:scale-95"
+              className="w-full bg-[#125476] text-white font-bold py-3 rounded-xl hover:bg-[#0E415C] transition duration-300 hover:shadow-lg transform hover:scale-[1.02] active:scale-95 cursor-pointer"
             >
               Reserve Now
             </button>

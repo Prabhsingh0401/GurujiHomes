@@ -104,7 +104,7 @@ export default function ContactSection() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="bg-[#125476] text-white px-6 py-2 rounded-md text-sm hover:bg-[#0E415C] transition"
+              className="bg-[#125476] text-white px-6 py-2 rounded-md text-sm hover:bg-[#0E415C] transition cursor-pointer"
             >
               Send Message
             </button>
