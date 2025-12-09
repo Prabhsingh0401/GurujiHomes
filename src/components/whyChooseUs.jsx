@@ -15,7 +15,7 @@ const Whychooseus = () => {
     <div className="grid grid-cols-1 md:grid-cols-4 gap-12 w-full max-w-7xl mt-10">
 
         {/* CARD 1 */}
-        <div className="bg-white rounded-xl p-6 shadow-md flex flex-col gap-3 md:-mt-14 mb-20">
+        <div className="bg-white rounded-xl p-6 shadow-md flex flex-col gap-3 md:-mt-14 mb-0 lg:mb-20">
           <Home size={32} strokeWidth={1.5} className="text-[#0A506B]" />
           <h3 className="font-semibold text-lg text-[#0A506B]">
             Spacious & Private Stays
@@ -39,7 +39,7 @@ const Whychooseus = () => {
         </div>
 
         {/* CARD 3 */}
-        <div className="bg-white rounded-xl p-6 shadow-md flex flex-col gap-3 md:-mt-14 mb-20">
+        <div className="bg-white rounded-xl p-6 shadow-md flex flex-col gap-3 md:-mt-14 mb-0 lg:mb-20">
           <Landmark size={32} strokeWidth={1.5} className="text-[#0A506B]" />
           <h3 className="font-semibold text-lg text-[#0A506B]">
             Live Like a Local
