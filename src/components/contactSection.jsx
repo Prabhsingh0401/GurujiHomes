@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import toast from "react-hot-toast";
 
 export default function ContactSection() {
   const infoCards = [
@@ -9,6 +10,27 @@ export default function ContactSection() {
     { icon: Clock, title: "Reception Hours", value: "24/7 Available" },
   ];
 
+  const [result, setResult] = useState("Submit");
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "06bdacb4-8dc6-4815-8daf-255cfeedd60d");
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      toast.success("Message sent successfully!");
+      setResult("Submit");
+    } else {
+      toast.error(res.message);
+      setResult("Submit");
+    }
+  };
   return (
     <section className="py-16 px-6 bg-white" id="contactus">
       {/* Header */}
@@ -35,80 +57,122 @@ export default function ContactSection() {
             Request Free Consultation
           </h2>
 
-          <form className="space-y-4">
+          <form onSubmit={onSubmit} className="space-y-4">
+            
+            {/* OPTIONAL: Email subject */}
+            <input
+              type="hidden"
+              name="subject"
+              value="New Contact Form Submission"
+            />
+
+            {/* OPTIONAL: Redirect URL after success */}
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://web3forms.com/success"
+            />
+
             {/* Name */}
             <div>
               <label className="block mb-1 text-gray-700 text-sm">Name *</label>
               <input
                 type="text"
+                name="name"
+                required
                 className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#125476]"
               />
             </div>
 
             {/* Email */}
             <div>
-              <label className="block mb-1 text-gray-700 text-sm">Email Address *</label>
+              <label className="block mb-1 text-gray-700 text-sm">
+                Email Address *
+              </label>
               <input
                 type="email"
+                name="email"
+                required
                 className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#125476]"
               />
             </div>
 
             {/* Phone */}
             <div>
-              <label className="block mb-1 text-gray-700 text-sm">Phone Number *</label>
+              <label className="block mb-1 text-gray-700 text-sm">
+                Phone Number *
+              </label>
               <input
                 type="tel"
+                name="phone"
+                required
                 className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#125476]"
               />
             </div>
 
-            {/* Check-in & Check-out (Single line) */}
+            {/* Check-in & Check-out */}
             <div className="flex gap-4">
               <div className="flex-1">
-                <label className="block mb-1 text-gray-700 text-sm">Check-in *</label>
+                <label className="block mb-1 text-gray-700 text-sm">
+                  Check-in *
+                </label>
                 <input
                   type="date"
+                  name="checkin"
+                  required
                   className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#125476]"
                 />
               </div>
+
               <div className="flex-1">
-                <label className="block mb-1 text-gray-700 text-sm">Check-out *</label>
+                <label className="block mb-1 text-gray-700 text-sm">
+                  Check-out *
+                </label>
                 <input
                   type="date"
+                  name="checkout"
+                  required
                   className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#125476]"
                 />
               </div>
             </div>
 
-            {/* Adults & Children (Single line) */}
+            {/* Adults & Children */}
             <div className="flex gap-4">
               <div className="flex-1">
-                <label className="block mb-1 text-gray-700 text-sm">Adults *</label>
+                <label className="block mb-1 text-gray-700 text-sm">
+                  Adults *
+                </label>
                 <input
                   type="number"
+                  name="adults"
                   min="1"
+                  required
                   className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#125476]"
                 />
               </div>
+
               <div className="flex-1">
-                <label className="block mb-1 text-gray-700 text-sm">Children</label>
+                <label className="block mb-1 text-gray-700 text-sm">
+                  Children
+                </label>
                 <input
                   type="number"
+                  name="children"
                   min="0"
                   className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#125476]"
                 />
               </div>
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               className="bg-[#125476] text-white px-6 py-2 rounded-md text-sm hover:bg-[#0E415C] transition cursor-pointer"
             >
-              Send Message
+              {result}
             </button>
           </form>
+
         </div>
 
         {/* RIGHT: CONTACT INFO CARDS */}

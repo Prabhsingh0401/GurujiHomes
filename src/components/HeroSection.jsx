@@ -1,6 +1,31 @@
+import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+
 export default function HeroSection() {
+  const [result, setResult] = useState("Reserve Now");
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "06bdacb4-8dc6-4815-8daf-255cfeedd60d");
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      toast.success("Message sent successfully!");
+      setResult("Reserve Now");
+    } else {
+      toast.error(res.message);
+      setResult("Reserve Now");
+    }
+  };
   return (
     <section id="home" className="relative h-auto lg:h-[600px] overflow-hidden shadow-2xl">
+
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -31,7 +56,7 @@ export default function HeroSection() {
 
         {/* RIGHT FORM SECTION */}
         <div className="flex justify-center items-center w-full animate-slide-up delay-200">
-          <form className="bg-white/95 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-xl w-full max-w-md space-y-5">
+          <form onSubmit={onSubmit} className="bg-white/95 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-xl w-full max-w-md space-y-5">
             <h3 className="text-2xl font-semibold text-[#125476] mb-2">Book Your Stay</h3>
 
             {/* Full Name */}
@@ -39,6 +64,7 @@ export default function HeroSection() {
               <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
               <input
                 type="text"
+                name="name"
                 className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#125476]"
                 placeholder="Enter your name"
               />
@@ -49,6 +75,7 @@ export default function HeroSection() {
               <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
               <input
                 type="text"
+                name="phone"
                 className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#125476]"
                 placeholder="Enter your phone number"
               />
@@ -60,6 +87,7 @@ export default function HeroSection() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Check In</label>
                 <input
                   type="date"
+                  name="checkin"
                   className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#125476]"
                 />
               </div>
@@ -68,6 +96,7 @@ export default function HeroSection() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Check Out</label>
                 <input
                   type="date"
+                  name="checkout"
                   className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#125476]"
                 />
               </div>
@@ -79,6 +108,7 @@ export default function HeroSection() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Adults</label>
                 <input
                   type="number"
+                  name="adults"
                   min="1"
                   defaultValue="1"
                   className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#125476]"
@@ -89,6 +119,7 @@ export default function HeroSection() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Children</label>
                 <input
                   type="number"
+                  name="children"
                   min="0"
                   defaultValue="0"
                   className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#125476]"
@@ -101,7 +132,7 @@ export default function HeroSection() {
               type="submit"
               className="w-full bg-[#125476] text-white font-bold py-3 rounded-xl hover:bg-[#0E415C] transition duration-300 hover:shadow-lg transform hover:scale-[1.02] active:scale-95 cursor-pointer"
             >
-              Reserve Now
+              {result}
             </button>
           </form>
         </div>
